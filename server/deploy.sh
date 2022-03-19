@@ -1,7 +1,7 @@
 #!/bin/bash
-ENV=$1 #stg, prd, dev, pocstg
+ENV=$1 #prod
 VAR=$2
-APP="localfood"
+APP="datz"
 
 sudo docker rmi $(sudo docker images -q) --force
 rm -rf app.tar

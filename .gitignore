@@ -1,0 +1,7 @@
+__pycache__
+server/.pyenv/
+server/env_vars
+server/terraform/key*
+server/terraform/envs/prod/.terraform*
+server/terraform/envs/prod/awscli_profile
+server/terraform/envs/prod/terraform*

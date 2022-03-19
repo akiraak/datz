@@ -1,0 +1,4 @@
+#!/bin/bash
+scp ~/.ssh/key-datz-app datz-prod-management:~/.ssh/
+scp ~/.ssh/key-datz-management datz-prod-management:~/.ssh/
+scp config datz-prod-management:~/.ssh/

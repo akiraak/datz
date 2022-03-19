@@ -1,0 +1,10 @@
+Host github.com
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/key-datz-management
+
+Host datz-prod
+    HostName 10.0.8.93
+    User ec2-user
+    IdentityFile ~/.ssh/key-datz-app
+

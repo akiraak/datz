@@ -1,0 +1,11 @@
+variable "name" {}
+variable "route53_zone_app_name" {}
+variable "region" {}
+variable "az_1" {}
+variable "az_2" {}
+variable "acm_certificate_arn" {}
+variable "public_key_path_management" {}
+variable "public_key_path_app" {}
+variable "instance_type_management" {}
+variable "instance_type_app" {}
+variable "db_instance_type_app" {}
