@@ -22,7 +22,7 @@ app.register_blueprint(api_routes, url_prefix='/api')
 
 @app.route('/')
 def hello_world():
-    return 'Welcome localfood'
+    return 'Welcome datz'
 
 
 import scheduler
