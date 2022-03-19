@@ -11,7 +11,7 @@ import os.path as op
 import urllib.request
 from app import app, db
 from config import Config
-from models import DBConfig, User, Spot
+from models import DBConfig, User
 
 
 class AppModelView(ModelView):
@@ -38,4 +38,3 @@ def setup_flask_admin():
     admin = Admin(app, index_view=MyHomeView())
     admin.add_view(AppModelView(DBConfig, db.session, name='サーバパラメータ'))
     admin.add_view(UserView(User, db.session, category='ユーザー'))
-    admin.add_view(AppModelView(Spot, db.session))
