@@ -1,0 +1,20 @@
+import os
+
+
+class Config():
+    APP_ENV = os.environ.get('APP_ENV')
+    SECRET_KEY = os.environ.get('FLASK_SECRET_KEY')
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
+    WTF_CSRF_ENABLED = False #True
+    SESSION_TYPE = 'sqlalchemy'
+    AWS_REGION = 'ap-northeast-1'
+    SQLALCHEMY_DATABASE_URI = None
+    FIREBASE_FCM_KEY = os.environ.get('FIREBASE_FCM_KEY')
+    SQLALCHEMY_DATABASE_URI = os.environ.get('SQLALCHEMY_DATABASE_URI')
+    S3_USER_CHALLENGE_IMAGE_BUCKET = os.environ.get('S3_USER_CHALLENGE_IMAGE_BUCKET')
+    S3_USER_CHALLENGE_IMAGE_URL = os.environ.get('S3_USER_CHALLENGE_IMAGE_URL')
+    S3_CHALLENGE_COVER_IMAGES_BUCKET = os.environ.get('S3_CHALLENGE_COVER_IMAGES_BUCKET')
+    S3_CHALLENGE_COVER_IMAGE_URL = os.environ.get('S3_CHALLENGE_COVER_IMAGE_URL')
+
+
+Config = Config()
