@@ -84,6 +84,20 @@ body {
   width: 140px;
 }
 
+.curation-ticket {
+  margin: 30px 0 0 0;
+}
+
+.curation-ticket img {
+  margin: 30px 40px 0 40px;
+  width: 160px;
+}
+
+.tickets img {
+  margin-left: 60px;
+  width: 100px;
+}
+
 .form-control-dark {
   color: #fff;
   background-color: rgba(255, 255, 255, .1);
