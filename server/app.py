@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 #from flask_httpauth import HTTPBasicAuth
 #from flask_login import LoginManager
 from flask_migrate import Migrate
@@ -21,8 +21,9 @@ app.register_blueprint(api_routes, url_prefix='/api')
 
 
 @app.route('/')
-def hello_world():
-    return 'Welcome datz'
+def index():
+    #return 'Welcome datz'
+    return render_template('index.html')
 
 
 import scheduler

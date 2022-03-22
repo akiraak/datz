@@ -4,7 +4,7 @@ Host github.com
     IdentityFile ~/.ssh/key-datz-management
 
 Host datz-prod
-    HostName 10.0.8.93
+    HostName 10.0.8.247
     User ec2-user
     IdentityFile ~/.ssh/key-datz-app
 
