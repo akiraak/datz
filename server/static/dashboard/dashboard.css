@@ -81,21 +81,8 @@ body {
 }
 
 .navbar .connect-wallet img {
+  margin: 0 20px 0 0;
   width: 140px;
-}
-
-.curation-ticket {
-  margin: 30px 0 0 0;
-}
-
-.curation-ticket img {
-  margin: 30px 40px 0 40px;
-  width: 160px;
-}
-
-.tickets img {
-  margin-left: 60px;
-  width: 100px;
 }
 
 .form-control-dark {
@@ -107,6 +94,24 @@ body {
 .form-control-dark:focus {
   border-color: transparent;
   #box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
+}
+
+#sidebarMenu {
+  top: 70px;
+}
+
+.curation-ticket {
+  margin: 40px 0 0 0;
+}
+
+.curation-ticket img {
+  margin: 30px 40px 0 40px;
+  width: 160px;
+}
+
+.tickets img {
+  margin-left: 60px;
+  width: 100px;
 }
 
 .store-name {
@@ -125,6 +130,17 @@ body {
   width: 300px;
 }
 
+.store-address a {
+  text-decoration: none;
+  color: #303030;
+}
+
+.store-address img.map-icon {
+  margin: 0 4px 0 0;
+  width: 16px;
+}
+
 .items img {
+  margin: 30px 0 0 0;
   width: 1000px;
 }

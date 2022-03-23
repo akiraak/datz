@@ -39,8 +39,10 @@
   </head>
   <body>
     
-<header class="navbar sticky-top flex-md-nowrap p-0">
-  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#"><img src="/static/home/name.png"></a>
+<header class="navbar sticky-top flex-md-nowrap p-0 border-bottom border-dark border-2">
+  <span style="padding: 30px;">
+    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#"><img src="/static/home/name.png"></a>
+  </span>
   <div class="navbar-nav">
     <div class="nav-item text-nowrap connect-wallet">
       <a class="nav-link px-3" href="#"><img src="/static/home/connect_wallet.png"></a>
@@ -55,12 +57,16 @@
         <ul class="nav flex-column">
           <li class="nav-item">
             <a class="nav-link" href="/">
-              Store curation
+              <div class="border-bottom border-dark border-2">
+                Store curation
+              </div>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/manage">
-              Manage
+              <div class="border-bottom border-dark border-2">
+                Manage
+              </div>
             </a>
           </li>
         </ul>
@@ -80,8 +86,11 @@
           </div>
         </div>
       </div>
-      <div>
-        <a href="https://www.google.com/maps/place/348+Hayes+St,+San+Francisco,+CA+94102/@37.7771455,-122.4243693,17z/data=!3m1!4b1!4m5!3m4!1s0x80858098e9c4dc99:0x856be06ee28b57cc!8m2!3d37.7771455!4d-122.4221806">348 Hayes St, San Francisco, CA</a>
+      <div class="store-address">
+        <a href="https://www.google.com/maps/place/348+Hayes+St,+San+Francisco,+CA+94102/@37.7771455,-122.4243693,17z/data=!3m1!4b1!4m5!3m4!1s0x80858098e9c4dc99:0x856be06ee28b57cc!8m2!3d37.7771455!4d-122.4221806">
+          <img class="map-icon" src="/static/home/map_icon.png">
+          348 Hayes St, San Francisco, CA
+        </a>
       </div>
       {% block content %}{% endblock %}
     </main>
