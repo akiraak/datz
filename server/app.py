@@ -22,8 +22,12 @@ app.register_blueprint(api_routes, url_prefix='/api')
 
 @app.route('/')
 def index():
-    #return 'Welcome datz'
     return render_template('index.html')
+
+
+@app.route('/manage')
+def manage():
+    return render_template('manage.html')
 
 
 import scheduler

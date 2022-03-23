@@ -112,6 +112,7 @@ resource "aws_route_table_association" "public_app_alb_2" {
 # ================================================
 # NAT gateway & Elastic IP & Root table
 # ================================================
+/*
 resource "aws_eip" "ngw" {
   vpc = true
   tags = {
@@ -127,13 +128,16 @@ resource "aws_nat_gateway" "main" {
     Name = "${var.name}"
   }
 }
+*/
 
 resource "aws_route_table" "private" {
   vpc_id = aws_vpc.main.id
+  /*
   route {
     nat_gateway_id = aws_nat_gateway.main.id
     cidr_block = "0.0.0.0/0"
   }
+  */
   tags = {
     Name = "${var.name}-private"
   }
@@ -379,6 +383,7 @@ resource "aws_s3_bucket" "logging" {
   */
 
   ## オブジェクトのライフサイクル設定。
+  /*
   lifecycle_rule {
     id      = "assets"
     enabled = true
@@ -407,8 +412,9 @@ resource "aws_s3_bucket" "logging" {
       storage_class = "GLACIER"
     }
   }
+  */
 
-  request_payer = "BucketOwner"
+  //request_payer = "BucketOwner"
 }
 
 resource "aws_s3_bucket_versioning" "logging" {
@@ -426,6 +432,26 @@ resource "aws_s3_bucket_public_access_block" "logging" {
   block_public_policy     = true
   ignore_public_acls      = true
   restrict_public_buckets = true
+}
+
+resource "aws_s3_bucket_lifecycle_configuration" "logging" {
+  bucket = aws_s3_bucket.logging.id
+
+  rule {
+    id      = "assets"
+
+    ## オブジェクトの保存期限。
+    expiration {
+      days = 90 ## 1年
+    }
+
+    status = "Enabled"
+  }
+}
+
+resource "aws_s3_bucket_request_payment_configuration" "example" {
+  bucket = aws_s3_bucket.logging.bucket
+  payer  = "BucketOwner"
 }
 
 # ================================================

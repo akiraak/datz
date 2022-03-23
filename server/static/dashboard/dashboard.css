@@ -120,3 +120,11 @@ body {
   font-size: 80px;
   font-weight: bold;
 }
+
+.store-name .users {
+  width: 300px;
+}
+
+.items img {
+  width: 1000px;
+}
